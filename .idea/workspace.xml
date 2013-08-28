@@ -6,7 +6,7 @@
     </list>
     <ignored path="les-etoiles.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="41872c2f-4696-41c3-981b-1d3f73c6816e" time="1377676513505" ignored="false" />
+    <file path="/Dummy.txt" changelist="41872c2f-4696-41c3-981b-1d3f73c6816e" time="1377676610545" ignored="false" />
     <file path="/Gemfile" changelist="41872c2f-4696-41c3-981b-1d3f73c6816e" time="1377676181538" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -459,7 +459,11 @@
       <created>1377676515967</created>
       <updated>1377676515967</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Devise eklendi.&#10;User, Teacher ve Admin devise modelleri entegre edildi. &#10;">
+      <created>1377676612293</created>
+      <updated>1377676612293</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
