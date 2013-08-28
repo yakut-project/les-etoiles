@@ -5,20 +5,8 @@
 <div class="container">
   <div class="header">
     <ul class="nav nav-pills pull-right">
-      <li class="active"><%= link_to "Anasayfa", root_path %> </li>
-      <% if current_user %>
+      <li class="active"><%= link_to "Kullanıcı Anasayfa", root_path %> </li>
           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-      <% elsif current_teacher %>
-          <li><%= link_to('Logout', destroy_teacher_session_path, :method => :delete) %></li>
-      <% elsif current_admin %>
-          <li><%= link_to('Logout', destroy_admin_session_path, :method => :delete) %></li>
-      <% else %>
-
-          <li>  <%= link_to('Admin Login', new_admin_session_path) %>  </li>
-          <li>  <%= link_to('Teacher Login', new_teacher_session_path) %></li>
-          <li>  <%= link_to('User Login', new_user_session_path) %> </li>
-
-      <% end %>
     </ul>
     <h3 class="text-muted">Les etoiles</h3>
   </div>

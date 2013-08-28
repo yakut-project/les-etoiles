@@ -1,0 +1,23 @@
+@import "bootstrap";
+@import "bootstrap/glyphicons";
+
+.text_field {
+  @extend .form-control;
+}
+.field {
+  @extend .form-group;
+}
+.actions {
+  @extend .form-group;
+}
+
+input {
+  @extend .form-control;
+}
+
+select {
+  @extend .form-control;
+}
+textarea {
+  @extend .form-control;
+}
