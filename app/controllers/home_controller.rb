@@ -5,8 +5,7 @@ class HomeController < ApplicationController
   end
 
   def admin
-    @grid = Grids::UsersGrid.new(params[:grid])
-    @assets = @grid.assets.paginate(:page => params[:page])
+    @users = User.all
   end
 
   def user
