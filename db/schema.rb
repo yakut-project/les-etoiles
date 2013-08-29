@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130829074729) do
+ActiveRecord::Schema.define(version: 20130829133303) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 20130829074729) do
     t.string  "bitbucket"
     t.text    "bio"
     t.integer "user_id"
+    t.string  "name"
+    t.string  "surname"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"

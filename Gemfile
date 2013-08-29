@@ -39,6 +39,7 @@ gem 'haml-rails'
 gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass.git', :branch => '3'
 gem 'simple_form', "3.0.0.rc"
 gem 'country_select'
+gem "datagrid", :git => "git://github.com/bogdan/datagrid.git"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
