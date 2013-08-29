@@ -1,15 +1,25 @@
 class UsersController < ApplicationController
   def index
-    @test = User.all
+    @test = User.find(current_user.id)
+
+    if @test.profile.nil?
+      @test = Profile.new
+      @test.user_id = current_user.id
+      @test.save
+    end
+
   end
 
   def show
     @test = User.find(params[:id]).profile
-
-
   end
 
   def update
+    render text: "update geldi baboli"
+  end
+
+  def edit
+    @test = User.new
 
   end
 end
