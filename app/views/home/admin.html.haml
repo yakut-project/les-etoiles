@@ -4,7 +4,7 @@
 
 %h1 Listing users
 
-%table
+%table{:class => "table table-hover"}
   %tr
     %th email
     %th created_at
@@ -18,9 +18,11 @@
       %td= user.email
       %td=l user.created_at
       %td=l user.updated_at
-      %td= link_to 'Show', user
-      %td= link_to 'Edit', edit_user_path(user)
-      %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td
+        .btn-group
+          = link_to 'Show', user
+          = link_to 'Edit', edit_user_path(user)
+          = link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
