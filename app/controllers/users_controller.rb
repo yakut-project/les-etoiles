@@ -4,9 +4,7 @@ class UsersController < ApplicationController
   end
 
   def show
-
     @test = current_user
-
   end
 
   def update
@@ -15,7 +13,6 @@ class UsersController < ApplicationController
 
   def edit
     @test = User.new
-
   end
 end
 
