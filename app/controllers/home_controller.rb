@@ -5,8 +5,8 @@ class HomeController < ApplicationController
   end
 
   def admin
-    @report_user = Report::Campaign.new(params[:report_user])
-    @assets = @report_user.assets.page(params[:page])
+    @grid = Grids::UsersGrid.new(params[:grid])
+    @assets = @grid.assets.paginate(:page => params[:page])
   end
 
   def user

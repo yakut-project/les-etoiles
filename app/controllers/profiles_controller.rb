@@ -19,7 +19,7 @@ class ProfilesController < ApplicationController
 
 
 
-     redirect_to users_path
+    redirect_to home_index_path
 
 
   end
