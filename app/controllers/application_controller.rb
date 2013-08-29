@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
     layout = 'user' if user_signed_in?
     layout = 'teacher' if teacher_signed_in?
     layout = 'admin' if admin_signed_in?
+    layout = "sessions" if params[:controller].include?("devise")
     layout
   end
 end
