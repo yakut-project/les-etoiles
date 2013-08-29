@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   end
 
   def admin
+    @users = User.all
   end
 
   def user
@@ -23,7 +24,7 @@ class HomeController < ApplicationController
         render :teacher
       elsif user_signed_in?
         user
-        redirect_to users_path
+        render :user
       else
         render :index
       end

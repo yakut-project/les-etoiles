@@ -1,5 +1,5 @@
 LesEtoiles::Application.routes.draw do
-  get "home/index"
+  get "home/index", to: "home#index", as: "home_index"
 
   devise_for :admins
   devise_for :teachers
