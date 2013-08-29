@@ -37,8 +37,9 @@ end
 gem 'haml', '~> 4.0.2'
 gem 'haml-rails'
 gem 'bootstrap-sass', :git => 'git://github.com/thomas-mcdonald/bootstrap-sass.git', :branch => '3'
-gem 'simple_form'
+gem 'simple_form', "3.0.0.rc"
 gem 'country_select'
+gem 'will_paginate', '~> 3.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

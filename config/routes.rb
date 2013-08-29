@@ -1,8 +1,12 @@
 LesEtoiles::Application.routes.draw do
-  get "home/index"
+  get "home/index", to: "home#index", as: "home_index"
+
   devise_for :admins
   devise_for :teachers
   devise_for :users
+
+  resources :users
+  resources :profiles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
