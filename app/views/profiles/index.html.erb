@@ -8,6 +8,14 @@
     <%= f.input :bitbucket, as: :string %>
     <%= f.input :bio, as: :text %>
 
+    <%= label_tag(:gender, "Cinsiyet") %>
+
+    <%= radio_button_tag(:gender, "man") %>
+    <%= label_tag(:gender_man, "Erkek") %>
+    <%= radio_button_tag(:gender, "woman") %>
+    <%= label_tag(:gender_woman, "Kadın") %>
+
+
     <%= f.button :submit, "Gönder" %>
 
 <% end %>
