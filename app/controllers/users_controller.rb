@@ -1,10 +1,17 @@
 class UsersController < ApplicationController
   def index
+    if admin_signed_in?
+
+    end
 
   end
 
   def show
-    @test = current_user
+    if admin_signed_in?
+      @test = User.find(params[:id])
+    else
+      @test = current_user
+    end
   end
 
   def update
