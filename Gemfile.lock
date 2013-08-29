@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/bogdan/datagrid.git
+  revision: bab159913f1666f9c5247a01578a5aaa959aa32c
+  specs:
+    datagrid (0.9.3)
+      rails (>= 3.0)
+
+GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
   revision: a71f09a26b2d6a56a70a2cdf26110434cd3fbdf8
   branch: 3
@@ -139,6 +146,7 @@ DEPENDENCIES
   bootstrap-sass!
   coffee-rails (~> 4.0.0)
   country_select
+  datagrid!
   devise
   haml (~> 4.0.2)
   haml-rails
