@@ -4,7 +4,7 @@ Les Etoiles is a "AR"akla-"GE"tir open-source web-application.
 
 == License
 
-Les Etoiles is released under the [MIT License](http://www.opensource.org/licenses/MIT).
+Les Etoiles is released under the {MIT License}[http://www.opensource.org/licenses/MIT].
 
 The MIT License (MIT)
 
