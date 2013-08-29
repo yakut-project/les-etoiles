@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @test = User.new
+    @user = User.find(params[:id])
   end
 end
 
