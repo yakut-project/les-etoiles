@@ -1,8 +1,8 @@
-## Welcome to Les Etoiles
+= Welcome to Les Etoiles
 
 Les Etoiles is a "AR"akla-"GE"tir open-source web-application.
 
-## License
+== License
 
 Les Etoiles is released under the [MIT License](http://www.opensource.org/licenses/MIT).
 
