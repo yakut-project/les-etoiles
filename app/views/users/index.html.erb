@@ -1,0 +1,5 @@
+<%= datagrid_form_for @grid, :method => :get, :url => users_path %>
+
+<%= some_pagination_helper(@assets) %>
+<%= datagrid_table @grid, @assets %>
+<%= some_pagination_helper(@assets) %>
