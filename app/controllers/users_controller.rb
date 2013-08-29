@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   def index
     @test = User.find(current_user.id)
 
+
+
     if @test.profile.nil?
       @test = Profile.new
       @test.user_id = current_user.id
@@ -11,7 +13,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @test = User.find(params[:id]).profile
+
+    @test = current_user
+
   end
 
   def update

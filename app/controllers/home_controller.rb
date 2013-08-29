@@ -23,7 +23,7 @@ class HomeController < ApplicationController
         render :teacher
       elsif user_signed_in?
         user
-        render :user
+        redirect_to users_path
       else
         render :index
       end

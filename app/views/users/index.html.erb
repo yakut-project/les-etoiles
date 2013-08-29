@@ -1,5 +1,5 @@
-<%= simple_form_for @test.profile do |f| %>
-    <div class="form-inputs">
+<%= simple_form_for @test.profile  do |f| %>
+
 
       <%= f.input :stackoverflow, as: :string %>
       <%= f.input :twitter, as: :string %>
@@ -8,11 +8,6 @@
       <%= f.input :bitbucket, as: :string %>
       <%= f.input :bio, as: :text %>
 
-
-
-    </div>
-
-    <div class="form-actions">
       <%= f.button :submit, "Gönder" %>
-    </div>
+
 <% end %>
