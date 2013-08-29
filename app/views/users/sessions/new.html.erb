@@ -4,7 +4,9 @@
     <h2 class="form-signin-heading">Student sign in</h2>
       <%= f.input :email, :required => false, :autofocus => true %>
       <%= f.input :password, :required => false %>
-      <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+      <%= f.label :remember_me do %>
+          <%= f.check_box :remember_me, :class => "checkbox", :style => "height: 16px !important; width: 16px !important; display: inline !important; margin-right: 4px; margin-top: 2px;" %>Remember me
+      <% end %>
       <%= f.button :submit, "Sign in", class: "btn btn-primary btn-block" %>
   <% end %>
   <%= render "teachers/shared/links" %>
