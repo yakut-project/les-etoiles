@@ -1,0 +1,13 @@
+<%= simple_form_for @test.profile  do |f| %>
+
+
+    <%= f.input :stackoverflow, as: :string %>
+    <%= f.input :twitter, as: :string %>
+    <%= f.input :github, as: :string %>
+    <%= f.input :blog, as: :string %>
+    <%= f.input :bitbucket, as: :string %>
+    <%= f.input :bio, as: :text %>
+
+    <%= f.button :submit, "Gönder" %>
+
+<% end %>

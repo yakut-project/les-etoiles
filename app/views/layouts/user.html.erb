@@ -5,6 +5,7 @@
 <div class="container">
   <div class="header">
     <ul class="nav nav-pills pull-right">
+      <li><%= link_to "Profil", profiles_path, :class => "btn-success" %></li>
       <li class="active"><%= link_to "Kullanıcı Anasayfa", root_path %> </li>
           <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
     </ul>
