@@ -39,7 +39,7 @@
 
 <% if teacher_signed_in? %>
     <h1>Yorumlar</h1>
-    <table border="1">
+    <table class="table table-hover ">
       <th>Title</th>
       <th>Comment</th>
       <% @user.comments.each do |comment| %>
