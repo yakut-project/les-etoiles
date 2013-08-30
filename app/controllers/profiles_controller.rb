@@ -13,11 +13,18 @@ class ProfilesController < ApplicationController
   end
 
   def update
-    updated_profile = User.find(current_user.id).profile
+
+
+
+    if admin_signed_in?
+      updated_profile = Profile.find(params[:id])
+    else
+      updated_profile = User.find(current_user.id).profile
+    end
+
+    #render json: params
 
     updated_profile.update(user_params)
-
-
 
     redirect_to home_index_path
 
@@ -25,6 +32,11 @@ class ProfilesController < ApplicationController
   end
 
   def user_params
-    params.require(:profile).permit(:stackoverflow, :twitter, :github, :blog, :bitbucket, :bio)
+    params.require(:profile).permit(:stackoverflow, :twitter, :github, :blog, :bitbucket, :bio, :name, :surname)
+  end
+
+  def edit
+    @profile = Profile.find(params[:id])
+
   end
 end

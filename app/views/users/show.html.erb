@@ -1,0 +1,23 @@
+<%= simple_form_for @test.profile  do |f| %>
+
+    <%= f.input :name, as: :string, disabled: @is_readonly  %>
+    <%= f.input :surname, as: :string, disabled: @is_readonly %>
+    <%= f.input :stackoverflow, as: :string, disabled: @is_readonly %>
+    <%= f.input :twitter, as: :string, disabled: @is_readonly %>
+    <%= f.input :github, as: :string, disabled: @is_readonly %>
+    <%= f.input :blog, as: :string, disabled: @is_readonly %>
+    <%= f.input :bitbucket, as: :string, disabled: @is_readonly %>
+    <%= f.input :bio, as: :text, disabled: @is_readonly %>
+
+    <%= f.input :cinsiyet,
+                :collection => [[true, 'Erkek'], [false, 'Kadın']],
+                :label_method => :last,
+                :value_method => :first,
+                :as => :radio_buttons,
+                :item_wrapper_class => 'inline',
+                :checked => true, disabled: @is_readonly  %>
+
+
+    <%= f.button :submit, "Gönder", disabled: @is_readonly %>
+
+<% end %>

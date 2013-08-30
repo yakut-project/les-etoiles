@@ -1,6 +1,7 @@
 <%= simple_form_for @test.profile  do |f| %>
 
-
+    <%= f.input :name, as: :string  %>
+    <%= f.input :surname, as: :string %>
     <%= f.input :stackoverflow, as: :string %>
     <%= f.input :twitter, as: :string %>
     <%= f.input :github, as: :string %>
@@ -8,12 +9,13 @@
     <%= f.input :bitbucket, as: :string %>
     <%= f.input :bio, as: :text %>
 
-    <%= label_tag(:gender, "Cinsiyet") %>
-
-    <%= radio_button_tag(:gender, "man") %>
-    <%= label_tag(:gender_man, "Erkek") %>
-    <%= radio_button_tag(:gender, "woman") %>
-    <%= label_tag(:gender_woman, "Kadın") %>
+    <%= f.input :cinsiyet,
+    :collection => [[true, 'Erkek'], [false, 'Kadın']],
+    :label_method => :last,
+    :value_method => :first,
+    :as => :radio_buttons,
+    :item_wrapper_class => 'inline',
+    :checked => true  %>
 
 
     <%= f.button :submit, "Gönder" %>
