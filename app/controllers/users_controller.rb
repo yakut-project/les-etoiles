@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     if admin_signed_in?
+      @user
 
     end
 
@@ -20,6 +21,8 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+
+    render json: @user.profile
   end
 end
 
