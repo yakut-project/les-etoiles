@@ -15,4 +15,36 @@
   <dd><%= @user.email %></dd>
   <dt><%= Profile.human_attribute_name(:name) %>:</dt>
   <dd><%= @profile.name %></dd>
+  <dt><%= Profile.human_attribute_name(:surname) %>:</dt>
+  <dd><%= @profile.surname %></dd>
+
+  <dt><%= Profile.human_attribute_name(:gender) %>:</dt>
+  <dd><%= t("gender.f" + @profile.gender.to_s) %></dd>
+
+  <dt><%= Profile.human_attribute_name(:date_of_birth) %>:</dt>
+  <dd><%= @profile.date_of_birth %></dd>
+  <dt><%= Profile.human_attribute_name(:stackoverflow) %>:</dt>
+  <dd><%= @profile.stackoverflow %></dd>
+  <dt><%= Profile.human_attribute_name(:github) %>:</dt>
+  <dd><%= @profile.github %></dd>
+  <dt><%= Profile.human_attribute_name(:twitter) %>:</dt>
+  <dd><%= @profile.twitter %></dd>
+  <dt><%= Profile.human_attribute_name(:blog) %>:</dt>
+  <dd><%= @profile.blog %></dd>
+  <dt><%= Profile.human_attribute_name(:website) %>:</dt>
+  <dd><%= @profile.website %></dd>
+  <dt><%= Profile.human_attribute_name(:bitbucket) %>:</dt>
+  <dd><%= @profile.bitbucket %></dd>
+  <dt><%= Profile.human_attribute_name(:bio) %>:</dt>
+  <dd><%= @profile.bio %></dd>
 </dl>
+
+
+
+
+
+
+
+
+
+

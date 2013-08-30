@@ -1,0 +1,4 @@
+tr:
+  gender:
+   ftrue: "Erkek"
+   ffalse: "Baayan"
