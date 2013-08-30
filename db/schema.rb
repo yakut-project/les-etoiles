@@ -35,10 +35,10 @@ ActiveRecord::Schema.define(version: 20130830093451) do
     t.string  "title"
     t.text    "body"
     t.integer "user_id"
-    t.integer "teachers_id"
+    t.integer "teacher_id"
   end
 
-  add_index "comments", ["teachers_id"], name: "index_comments_on_teachers_id"
+  add_index "comments", ["teacher_id"], name: "index_comments_on_teacher_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "profiles", force: true do |t|
