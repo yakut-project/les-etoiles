@@ -1,0 +1,14 @@
+<div class="page-header">
+  <h1>
+    <%= "User Show" %>
+    <div class="pull-right">
+      <%= link_to 'Edit', profiles_path %>
+      <%= link_to 'Back', home_index_path %>
+    </div>
+  </h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><%= Profile.human_attribute_name(:name) %>:</dt>
+  <dd><%= @profile.name %></dd>
+</dl>

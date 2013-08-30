@@ -5,7 +5,8 @@ class HomeController < ApplicationController
   end
 
   def admin
-    @users = User.all
+    @profiles = Profile.all
+
   end
 
   def user
