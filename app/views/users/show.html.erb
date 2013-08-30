@@ -37,6 +37,39 @@
   <dd><%= @profile.bio %></dd>
 </dl>
 
+<% if admin_signed_in? or teacher_signed_in? %>
+    <h1>Yorumlar</h1>
+    <table border="1">
+      <th>Author</th>
+      <th>Comment</th>
+      <% @user.comments.each do |comment| %>
+          <tr>
+            <td>
+              <%= comment.title %>
+            </td>
+            <td>
+              <%= comment.body %>
+            </td>
+          </tr>
+      <% end %>
+    </table>
+
+    <%= simple_form_for(@user) do |c| %>
+        <%= c.error_notification %>
+        <%= c.simple_fields_for :comments, @user.comments.last do |comment| %>
+            <%= comment.input :title %>
+            <%= comment.input :body, as: :text %>
+        <% end %>
+        </div>
+
+        <div class="form-actions">
+          <%= c.button :submit %>
+        </div>
+    <% end %>
+
+<% end %>
+
+
 
 
 
