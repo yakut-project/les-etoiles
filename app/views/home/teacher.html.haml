@@ -1,0 +1,29 @@
+.page-header
+  .h1
+    Teacher Home
+
+%h1 Listing users
+
+%table{:class => "table table-hover"}
+  %tr
+    %th Name
+    %th Surname
+    %th Gender
+    %th Email
+    %th
+    %th
+
+  - @profiles.each do |profile|
+    %tr
+      %td= profile.name
+      %td= profile.surname
+      %td= profile.gender == 'm' ? 'Erkek' : 'Bayan'
+      %td= profile.user.email
+
+      %td
+        .btn-group
+          = link_to 'Show', user_path(profile.user)
+          = link_to 'Edit', edit_user_path(profile.user)
+          = link_to 'Destroy', profile.user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
