@@ -40,7 +40,7 @@
 <% if admin_signed_in? or teacher_signed_in? %>
     <h1>Yorumlar</h1>
     <table border="1">
-      <th>Author</th>
+      <th>Title</th>
       <th>Comment</th>
       <% @user.comments.each do |comment| %>
           <tr>
