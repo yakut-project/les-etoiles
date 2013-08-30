@@ -13,6 +13,7 @@ class HomeController < ApplicationController
   end
 
   def teacher
+    @profiles = Profile.all
   end
 
   private
