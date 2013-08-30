@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
 
     @user = User.new(user_params)
-
+    @user.comments.last.teacher_id = current_user.id if @user.comments.last
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -46,9 +46,6 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-
-
-
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -78,6 +75,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, profile_attributes: [:id, :name, :surname, :gender, :date_of_birth, :stackoverflow, :github, :twitter, :blog, :website, :bitbucket, :bio, :_destroy ], comments_attributes: [:id, :title, :body, :_destroy ])
+      params.require(:user).permit(:email, profile_attributes: [:id, :name, :surname, :gender, :date_of_birth, :stackoverflow, :github, :twitter, :blog, :website, :bitbucket, :bio, :_destroy ], comments_attributes: [:id, :title, :body, :_destroy, :teacher_id => current_teacher.id ])
     end
 end

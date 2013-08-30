@@ -37,7 +37,7 @@
   <dd><%= @profile.bio %></dd>
 </dl>
 
-<% if admin_signed_in? or teacher_signed_in? %>
+<% if teacher_signed_in? %>
     <h1>Yorumlar</h1>
     <table border="1">
       <th>Title</th>
