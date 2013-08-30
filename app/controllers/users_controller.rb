@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def show
     if admin_signed_in?
       @test = User.find(params[:id])
+      @is_readonly = true;
     else
       @test = current_user
     end
@@ -23,6 +24,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     render json: @user.profile
+  end
+
+  def destroy
+    if admin_signed_in?
+      User.destroy(params[:id])
+    end
+    redirect_to home_index_path
   end
 end
 

@@ -1,6 +1,7 @@
 <%= simple_form_for @test.profile  do |f| %>
 
-
+    <%= f.input :name, as: :string  %>
+    <%= f.input :surname, as: :string %>
     <%= f.input :stackoverflow, as: :string %>
     <%= f.input :twitter, as: :string %>
     <%= f.input :github, as: :string %>
