@@ -1,0 +1,24 @@
+<%= simple_form_for(@user) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email %>
+    <%= f.simple_fields_for :profile do |profile| %>
+        <%= profile.input :name %>
+        <%= profile.input :surname %>
+        <%= profile.input :gender %>
+        <%= profile.input :date_of_birth %>
+        <%= profile.input :stackoverflow %>
+        <%= profile.input :github %>
+        <%= profile.input :twitter %>
+        <%= profile.input :blog %>
+        <%= profile.input :website %>
+        <%= profile.input :bitbucket %>
+        <%= profile.input :bio %>
+    <% end %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
