@@ -5,13 +5,15 @@ class HomeController < ApplicationController
   end
 
   def admin
-    @users = User.all
+    @profiles = Profile.all
+
   end
 
   def user
   end
 
   def teacher
+    @profiles = Profile.all
   end
 
   private

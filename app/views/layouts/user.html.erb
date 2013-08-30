@@ -7,12 +7,11 @@
     <ul class="nav nav-pills pull-right">
       <li><%= link_to "Profil", profiles_path, :class => "btn-success" %></li>
       <li class="active"><%= link_to "Kullanıcı Anasayfa", root_path %> </li>
-          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <li><%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "btn btn-danger") %></li>
     </ul>
-    <h3 class="text-muted">Les etoiles</h3>
+    <h3 class="text-muted"> <%= image_tag("star_red.png") %> <%= link_to('Les etoiles', root_path) %></h3>
   </div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <%= render "layouts/notification" %>
   <%= yield %>
 
   <%= render "layouts/footer" %>

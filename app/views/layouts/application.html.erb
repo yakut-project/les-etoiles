@@ -10,10 +10,9 @@
       <li>  <%= link_to('Teacher Login', new_teacher_session_path) %></li>
       <li>  <%= link_to('Student Login', new_user_session_path) %> </li>
     </ul>
-    <h3 class="text-muted">Les etoiles</h3>
+    <h3 class="text-muted"> <%= image_tag("star_red.png") %> <%= link_to('Les etoiles', root_path) %></h3>
   </div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <%= render "layouts/notification" %>
   <%= yield %>
 
   <%= render "layouts/footer" %>
